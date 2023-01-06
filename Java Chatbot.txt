@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+public class Chatbot {
+
+  public static void main(String[] args) {
+    Scanner scanner = new Scanner(System.in);
+    String input = "";
+    String response = "";
+
+    System.out.println("Hi, I'm a chatbot. What's your name?");
+    input = scanner.nextLine();
+    System.out.println("Nice to meet you, " + input + ". How can I help you today?");
+
+    while (!input.equals("bye")) {
+      input = scanner.nextLine();
+      if (input.equals("hi")) {
+        response = "Hello!";
+      } else if (input.equals("how are you")) {
+        response = "I'm just a chatbot, so I don't have feelings. But thanks for asking!";
+      } else if (input.equals("what's your favorite color")) {
+        response = "I'm just a chatbot, so I don't have personal preferences. But blue is a nice color.";
+      }
+        else if(input.equals("What is your favourite destination?")){
+            response = " Well as I sadi I don't have any preferences, I cant genuinely answer this question. But, yeh, sometimes I feel to go to Tamilnadu. It's a beautiful place & I live it...";
+        }
+       else {
+        response = "I'm sorry, I didn't understand your input. Could you please rephrase that?";
+      }
+      System.out.println(response);
+    }
+    System.out.println("Goodbye! It was nice talking to you.");
+  }
+}
